@@ -8,12 +8,12 @@
 import scrapy
 
 
-class txItem(scrapy.Item):
+class wmtItem(scrapy.Item):
     # define the fields for your item here like:
     name = scrapy.Field()
     date = scrapy.Field()
+    url = scrapy.Field()
 
-class huabanItem(scrapy.Item):
-    # define the fields for your item here like:
+# class huabanItem(scrapy.Item):
     # name = scrapy.Field()
     # date = scrapy.Field()

@@ -5,7 +5,7 @@
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 
-from python_scrapy.items import txItem
+from python_scrapy.items import wmtItem
 
 
 #先执行
@@ -24,15 +24,15 @@ class PythonScrapyPipelineHuaban(object):
         return item
 
 #依次执行(item 是上一个的 item)
-class PythonScrapyPipelineTX(object):
+class PythonScrapyPipelineWMT(object):
     def process_item(self, item, spider):
         #几种判断方法都行 
         # if isinstance(item,txItem):
-        if(spider.name == 'tx'):
+        if(spider.name == 'wmt'):
             item = dict(item)
             print(item)
         
-        with open('resource/tx.txt','a') as file_obj:   
-            file_obj.write(item["name"]+'\n')
+        with open('resource/wmt.txt','a') as file_obj:   
+            file_obj.write(item["name"]+'\n' + item["url"] + '\n')
 
         return item

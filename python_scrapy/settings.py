@@ -71,7 +71,7 @@ ROBOTSTXT_OBEY = True
 ITEM_PIPELINES = {
    'python_scrapy.pipelines.PythonScrapyPipeline': 300,
    'python_scrapy.pipelines.PythonScrapyPipelineHuaban': 301,
-   'python_scrapy.pipelines.PythonScrapyPipelineTX': 302,
+   'python_scrapy.pipelines.PythonScrapyPipelineWMT': 302,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
