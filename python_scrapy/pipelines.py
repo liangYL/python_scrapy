@@ -30,9 +30,11 @@ class PythonScrapyPipelineWMT(object):
         # if isinstance(item,txItem):
         if(spider.name == 'wmt'):
             item = dict(item)
-            print(item)
-        
+           
         with open('resource/wmt.txt','a') as file_obj:   
-            file_obj.write(item["name"]+'\n' + item["url"] + '\n')
+            file_obj.write(item["name"]+'\n' 
+            + item["url"] + '\n' 
+            + ''.join(item['content']) + '\n' 
+            + '=======================================' + '\n')
 
         return item

@@ -13,6 +13,9 @@ class wmtItem(scrapy.Item):
     name = scrapy.Field()
     date = scrapy.Field()
     url = scrapy.Field()
+    id = scrapy.Field()
+    p_id = scrapy.Field()
+    content = scrapy.Field()
 
 # class huabanItem(scrapy.Item):
     # name = scrapy.Field()
