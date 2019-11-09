@@ -2,6 +2,8 @@
 import scrapy
 from python_scrapy.items import wmtItem
 
+#创建文件命令 scrapy genspider baidu baidu.com
+#运行命令 scrapy crawl tx
 class WmtSpider(scrapy.Spider):
     name = 'wmt'
     allowed_domains = ['99mi.com']
