@@ -31,9 +31,9 @@ class CsdnSpider(scrapy.Spider):
         dri.get("https://passport.csdn.net/login")
         aa =  dri.find_element_by_link_text("账号登录")
         aa.click()
-        dri.find_element_by_id('all').send_keys('757228500@qq.com')
+        dri.find_element_by_id('all').send_keys('xxx')
         sleep(1)
-        dri.find_element_by_id('password-number').send_keys('df19901006')
+        dri.find_element_by_id('password-number').send_keys('xxx')
         sleep(1)
         # js = "document.getElementByClass('btn-primary__disabled').style.display='block'"
         # dri.execute_script(js) //执行 js
