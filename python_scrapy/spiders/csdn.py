@@ -35,9 +35,15 @@ class CsdnSpider(scrapy.Spider):
         sleep(1)
         dri.find_element_by_id('password-number').send_keys('xxx')
         sleep(1)
+        # 调用 js
         # js = "document.getElementByClass('btn-primary__disabled').style.display='block'"
-        # dri.execute_script(js) //执行 js
-        # bb = dri.find_element_by_xpath("//input[@id='kw']") //xpath 模式查找
+        # dri.execute_script(js)
+        # xpath 模式查找
+        # bb = dri.find_element_by_xpath("//input[@id='kw']")
+        # 获取多标签
+        # cc =  dri.find_elements_by_xpath("//div[@id='waterfall']/div/a/img")
+        # 获取元素信息
+        # cc[0].get_attribute('src')
 
         bb =  dri.find_element_by_class_name('btn-primary')
         bb.click()
@@ -49,6 +55,9 @@ class CsdnSpider(scrapy.Spider):
         action.reset_actions()
         action.move_by_offset(780, 0).perform()  # 移动滑块
         # action.drag_and_drop_by_offset(button, 700, 0).perform()
+
+        # 输出网页源代码
+        print(dri.page_source)
 
         cookie_items = dri.get_cookies()  
         cookie_dict = {}
